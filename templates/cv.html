@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+    <style>
+        body {
+
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .a4-border {
+            border: 2px solid black;
+            width: 200mm;
+            height: 283mm   ;
+            position: relative;
+            margin-left: 33%;
+            
+        }
+        .a4-border img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+<div><span style="color: white; font-size: 27px; margin-right: 710px;"><b><u><a href="/"><img src="{% static '\css\emoji\house.png' %}" alt="Logo"></a></u></b></span>
+</div>
+    <div class="a4-border">
+        
+        <img src="{{ cvimg }}" alt="CV Image" style="border-radius: 10px;">
+    </div>
+</body>
+</html>
